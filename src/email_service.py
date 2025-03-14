@@ -8,13 +8,12 @@ class EmailService:
         self.sender_email = sender_email
         self.sender_password = sender_password
         self.recipient_email = recipient_email
-        
     
     def send_email(self):
         msg = MIMEText("Es ist Post eingegangen")
         msg["Subject"] = "Es ist Post im Briefkasten"
-        msg["From"] = self.send_email
-        msg["To"] = self.recipient_Email
+        msg["From"] = self.sender_email
+        msg["To"] = self.recipient_email
         
         try:
             with smtplib.SMTP(self.smtp_server, self.smtp_port) as server:
