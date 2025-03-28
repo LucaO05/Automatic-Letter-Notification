@@ -7,5 +7,5 @@ class Config:
     smtp_server = "smtp.gmail.com"
     smtp_port = 587
     sender_Email = "christophluca2@gmail.com"
-    sender_Password = "LucaStinkt123"
+    sender_Password = "sdsp vjrp tnna xmow"
     recipient_Email = "LucaOestreich2804@gmail.com"
