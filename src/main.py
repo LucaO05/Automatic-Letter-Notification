@@ -3,7 +3,7 @@ from email_service import EmailService
 from config import Config
 
 def main():
-    email_service = EmailService(Config.smpt_Server, Config.smpt_port, Config.sender_Email, Config.sender_Password, Config.recipient_Email)
+    email_service = EmailService(Config.smtp_Server, Config.smtp_port, Config.sender_Email, Config.sender_Password, Config.recipient_Email)
     gpio_service = GPIOService(Config.sensorPin, Config.lampPin, Config.switch, email_service)
     
     try: 
