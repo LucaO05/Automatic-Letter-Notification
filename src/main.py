@@ -11,7 +11,7 @@ def main():
     email_service = EmailService(Config.smtp_server, Config.smtp_port, Config.sender_Email, Config.sender_Password, Config.recipient_Email)
     
     print("Initializing GPIO service...")
-    gpio_service = GPIOService(Config.sensorPin, Config.lampPin, Config.switch)
+    gpio_service = GPIOService(Config.sensorPin)
     gpio_service.email_service = email_service
     
     try:
