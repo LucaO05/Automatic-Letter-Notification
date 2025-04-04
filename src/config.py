@@ -1,9 +1,8 @@
 class Config:
-    # PIN definitions
+    # PIN definition for laser sensor
     sensorPin = 17
-    lampPin = 27
-    switch = 22
-    #Mail-Config
+    
+    # Email configuration
     smtp_server = "smtp.gmail.com"
     smtp_port = 587
     sender_Email = "christophluca2@gmail.com"
