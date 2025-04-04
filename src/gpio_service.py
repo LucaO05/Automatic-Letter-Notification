@@ -5,6 +5,7 @@ class GPIOService:
         self.sensor_pin = sensorPin
         self.lamp_pin = lampPin
         self.switch_pin = switch
+        self.email_service = None  # This will be set in main.py
         
     def setup(self):
         gpio.setmode(gpio.BCM)
@@ -18,7 +19,8 @@ class GPIOService:
 
     def post_received(self, channel):
         gpio.output(self.lamp_pin, gpio.HIGH)
-        email_service.send_email()
+        if self.email_service:
+            self.email_service.send_email()
         
     def lamp_down(self, channel):
         gpio.output(self.lamp_pin, gpio.LOW)
